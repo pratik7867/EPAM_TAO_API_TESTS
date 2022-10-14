@@ -28,6 +28,7 @@ namespace EPAM_TAO_API_TESTS.BaseAPITestConfig
             }
             catch (Exception ex)
             {
+                ErrorLogger.errorLogger.ErrorLog(MethodBase.GetCurrentMethod().Name, ex);
                 ExtentReportHelper.GetInstance(strAUT).SetTestStatusFail($"<br>{ex.Message}<br>Stack Trace: <br>{ex.StackTrace}<br>");
             }
         }
@@ -57,6 +58,7 @@ namespace EPAM_TAO_API_TESTS.BaseAPITestConfig
             }
             catch (Exception ex)
             {
+                ErrorLogger.errorLogger.ErrorLog(MethodBase.GetCurrentMethod().Name, ex);
                 ExtentReportHelper.GetInstance(strAUT).SetTestStatusFail($"<br>{ex.Message}<br>Stack Trace: <br>{ex.StackTrace}<br>");
             }
             finally
