@@ -60,7 +60,7 @@ namespace EPAM_TAO_API_TESTS.APITests
             catch(Exception ex)
             {                
                 testEx = ex;
-                Assert.Fail();
+                Assert.Fail(ex.Message);
             }
 
             #endregion
@@ -107,7 +107,7 @@ namespace EPAM_TAO_API_TESTS.APITests
             catch (Exception ex)
             {
                 testEx = ex;
-                Assert.Fail();
+                Assert.Fail(ex.Message);
             }
         }
 
@@ -142,7 +142,7 @@ namespace EPAM_TAO_API_TESTS.APITests
             catch (Exception ex)
             {
                 testEx = ex;
-                Assert.Fail();
+                Assert.Fail(ex.Message);
             }
         }
     }

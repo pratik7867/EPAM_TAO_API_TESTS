@@ -11,10 +11,10 @@ namespace EPAM_TAO_API_TESTS.BaseAPITestConfig
     [TestClass]
     public abstract class BaseAPITestConfigurations
     {
+        private string strAUT { get { return ConfigurationManager.AppSettings["AUT"].ToString(); } }
+        private string strBaseURL { get { return ConfigurationManager.AppSettings["BaseURL"].ToString(); } }
         public TestContext TestContext { get; set; }
-        public Exception testEx { get; set; }
-        public string strAUT { get { return ConfigurationManager.AppSettings["AUT"].ToString(); } }
-        public string strBaseURL { get { return ConfigurationManager.AppSettings["BaseURL"].ToString(); } }        
+        public Exception testEx { get; set; }        
 
         public RestClient restClient;        
 
